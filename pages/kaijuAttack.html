@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,26 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
     <a href="/index.html" onclick="removeCookies()">Play Again</a>
-    <section id="playerSection">
-        <div id="attackButton" onclick=""><p>Attack!!</p></div>
-    </section>
+
+    <div>
+        <section id="playerSection">
+        </section>
+        <p id="playerHealthStatement"></p>
+        <div id="attackButton" onclick="userAttack()">
+            <p>Attack!!</p>
+        </div>
+    </div>
     <section id="computerSection">
 
     </section>
+    <p id="computerHealthStatement"></p>
 
 
     <script src='https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js'></script>
     <script src='/js/kaijuAttack.js'></script>
 </body>
+
 </html>

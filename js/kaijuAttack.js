@@ -2,13 +2,18 @@
 
 function removeCookies() {
     Cookies.remove("playerKaijuSelection")
+    Cookies.remove("userMaxHealth")
+    Cookies.remove("computerMaxHealth")
+    Cookies.remove("userCurrentHealth")
+    Cookies.remove("computerCurrentHealth")
 }
+
 
 var kaijuList = [
     {
         kaijuName: "King Kong",
-        maxHealth: 40,
-        attackStrength: 8
+        maxHealth: 50,
+        attackStrength: 6
     },
     {
         kaijuName: "Godzilla",
@@ -25,8 +30,8 @@ var kaijuList = [
 var playerKaijuSelection = Cookies.get("playerKaijuSelection");
 
 var playerContainer = document.getElementById('playerSection')
-
 playerContainer.append(playerKaijuSelection);
+var computerContainer = document.getElementById('computerSection')
 
 
 // console.log(playerKaijuSelection);
@@ -35,7 +40,7 @@ if (playerKaijuSelection === 'King Kong') {
     var userMaxHealth = kaijuList[0].maxHealth;
     var userKaiju = kaijuList[0].kaijuName;
     var userAttackStrength = kaijuList[0].attackStrength
-    
+
     var computerMaxHealth = kaijuList[1].maxHealth;
     var computerKaiju = kaijuList[1].kaijuName;
     var computerAttackStrength = kaijuList[1].attackStrength
@@ -61,16 +66,44 @@ if (playerKaijuSelection === 'King Kong') {
 } else {
     playerContainer.innerHTML = "<p>You need to choose a player</p>"
 }
+var userCurrentHealth = userMaxHealth;
+var computerCurrentHealth = computerMaxHealth;
+var playerHealthStatement = document.getElementById('playerHealthStatement');
+playerHealthStatement.innerHTML = `<p> ${playerCurrentHealth}/${userMaxHealth}`;
+var computerHealthStatement = document.getElementById('computerHealthStatement');
+computerHealthStatement.innerHTML = `<p> ${computerCurrentHealth}/${computerMaxHealth}`;
 
 
+var playerCurrentHealth = Cookies.get("userCurrentHealth");
+function computerAttack() {
+    playerCurrentHealth -= userAttackStrength;
+    Cookies.set("userCurrentHealth", playerCurrentHealth);
+    playerHealthStatement.innerHTML = `<p> ${playerCurrentHealth}/${userMaxHealth}`;
+    if (playerCurrentHealth <= 0) {
+        playerContainer.innerHTML = "<p>You lose :)</p>"
+    } 
+}
 
-console.log(userKaiju + "  " + userMaxHealth + "  " + userAttackStrength);
+function userAttack() {
+    attackButton.style.backgroundColor = "red";
+    var computerCurrentHealth = Cookies.get("computerCurrentHealth")
 
-// function userAttack(){
-//     if (userMaxHealth <= 0) {
-//         playerContainer.innerHTML = "<p>You lose :(</p>"
-//     } else if ({
-        
-//     }
-   
-// }
+    computerCurrentHealth -= 5;
+    Cookies.set("computerCurrentHealth", computerCurrentHealth);
+    computerHealthStatement.innerHTML = `<p> ${computerCurrentHealth}/${computerMaxHealth}`;
+    computerAttack();
+    if (computerCurrentHealth <= 0) {
+        playerContainer.innerHTML = "<p>You win :)</p>"
+    } 
+}
+
+var attackButton = document.getElementById('attackButton');
+
+
+playerHealthStatement.innerHTML = `<p> ${userCurrentHealth}/${userMaxHealth}`;
+
+
+playerContainer.innerText += "  " + userMaxHealth + "  " + userAttackStrength;
+
+computerContainer.innerText += computerKaiju + "  " + computerMaxHealth + "  " + computerAttackStrength;
+console.log(computerKaiju + "  " + computerMaxHealth + "  " + computerAttackStrength);
