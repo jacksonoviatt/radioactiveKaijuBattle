@@ -16,7 +16,7 @@ var kaijuList = [
         attackStrength: 6
     },
     {
-        kaijuName: "Mecha Godzilla",
+        kaijuName: "Mechagodzilla",
         maxHealth: 50,
         attackStrength: 6
     }
@@ -40,7 +40,7 @@ if (playerKaijuSelection === 'King Kong') {
     var computerKaiju = kaijuList[1].kaijuName;
     var computerAttackStrength = kaijuList[1].attackStrength
 
-} else if (playerKaijuSelection === 'chooseGodzilla') {
+} else if (playerKaijuSelection === 'Godzilla') {
     var userMaxHealth = kaijuList[1].maxHealth;
     var userKaiju = kaijuList[1].kaijuName;
     var userAttackStrength = kaijuList[1].attackStrength
@@ -49,14 +49,14 @@ if (playerKaijuSelection === 'King Kong') {
     var computerKaiju = kaijuList[2].kaijuName;
     var computerAttackStrength = kaijuList[2].attackStrength
 
-} else if (playerKaijuSelection === 'chooseMecha') {
+} else if (playerKaijuSelection === "Mechagodzilla") {
     var userMaxHealth = kaijuList[2].maxHealth;
     var userKaiju = kaijuList[2].kaijuName;
     var userAttackStrength = kaijuList[2].attackStrength
 
-    var computerMaxHealth = kaijuList[3].maxHealth;
-    var computerKaiju = kaijuList[3].kaijuName;
-    var computerAttackStrength = kaijuList[3].attackStrength
+    var computerMaxHealth = kaijuList[0].maxHealth;
+    var computerKaiju = kaijuList[0].kaijuName;
+    var computerAttackStrength = kaijuList[0].attackStrength
 
 } else {
     playerContainer.innerHTML = "<p>You need to choose a player</p>"

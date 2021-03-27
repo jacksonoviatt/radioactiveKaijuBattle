@@ -7,7 +7,7 @@ function selectKaiju(kaijuChoice) {
 }
 
 var playersSelection = Cookies.get("playerKaijuSelection");
-
+console.log(playersSelection);
 var chooseAKaiju = document.getElementsByClassName("chooseAKaiju");
 for(var i = 0; i < chooseAKaiju; i++) {
 }
