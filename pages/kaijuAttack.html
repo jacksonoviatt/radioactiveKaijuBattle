@@ -6,27 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/attack.css">
 </head>
 
 <body>
     <a href="/index.html" onclick="removeCookies()">Play Again</a>
-    <div id="winnerStatement"><p>Lets Play</p></div>
-    <div class="playerArea">
-        <section id="playerSection"> 
-        </section>
-        <p id="playerHealthStatement"></p>
-        <div id="attackButton" onclick="userAttack()">
-            <p>Attack!!</p>
-        </div>
+    <div id="winnerStatement">
+        <p>Lets Play</p>
     </div>
-    <div class=" computerArea">
-    <section id="computerSection">
+    <section id="gamePlay">
+        <div class="area">
+            <p id="playerHealthStatement"></p>
+            <section id="playerSection">
+            </section>
+            
+            <div class="comboScore">
+                <p>Your Combo:</p>
+                <h3 id="attackScorePlayer"><br></h3>
+            </div>
+        </div>
+        <div class="area">
+           <p id="computerHealthStatement"></p>
+            <section id="computerSection">
 
+            </section>
+            
+            <div class="comboScore">
+                <p>Enemy Combo:</p>
+                <h3 id="attackScoreComputer"><br></h3>
+            </div>
+        </div>
     </section>
-    <p id="computerHealthStatement"></p>
-</div>
-
+    <div id="attackButton" onclick="userAttack()">
+        <p>Attack!!</p>
+    </div>
 
     <script src='https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js'></script>
     <script src='/js/kaijuAttack.js'></script>

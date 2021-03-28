@@ -1,0 +1,72 @@
+@import "_globals.scss";
+#gamePlay {
+    background-image: linear-gradient(to right, $fernGreen, $purple);
+    height: 500px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    border-top: $fernGreen 5px solid;
+    border-bottom: $purple 5px solid;
+    border-left: $purple 5px solid;
+    border-right: $fernGreen 5px solid;
+    color: $almond;
+    .area {
+        text-align: center;
+        width: 40%;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        section {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+    }
+}
+
+.comboScore {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px;
+    h3 {
+        font-size: 30px;
+        color: $orange;
+        font-weight: 300;
+        // text-align: right;
+        // margin-left: 110px;
+    }
+}
+.kaijuImage {
+    height: 300px;
+}
+
+#makeAChoice {
+    background-color: $purple;
+    color: $almond;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    h3 {
+        margin-bottom: 30px;
+        font-size: 30px;
+        align-self: flex-end;
+    }
+    a {
+        color: $purple;
+        letter-spacing: 2.2px;
+        text-decoration: none;
+        padding: 30px 0 0;
+        height: 70px;
+        width: 230px;
+        font-weight: 900;
+        font-size: 30px;
+        text-align: center;
+        background-color: $fernGreen;
+        border-radius: 50px;
+        text-shadow: -0.8px -0.8px 0 $almond, 0.8px -0.8px 0 $almond, -0.8px 0.8px 0 $almond, 0.8px 0.8px 0 $almond;
+    }
+}
