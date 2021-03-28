@@ -17,22 +17,43 @@
 //     }
 // ];
 
+function setKaijuValues(enemy, playerStrength, playerHealth, enemyStrength, enemyHealth) {
+    var enemyKaiju = document.getElementById(enemy).outerHTML;
+    Cookies.set("opponent", enemyKaiju);
+    Cookies.set("userMaxHealth", playerHealth);
+    Cookies.set("userCurrentHealth", playerHealth);
+    
+    Cookies.set("attackStrength", playerStrength);
+    Cookies.set("opponentAttackStrength", enemyStrength)
+    
+    Cookies.set("computerCurrentHealth", enemyHealth);
+    Cookies.set("computerMaxHealth", enemyHealth);
+}
+
 
 
 function selectKaiju(kaijuChoice) {
     var chosenKaiju = document.getElementById(kaijuChoice);
-    kaijuChoice = chosenKaiju.outerHTML;
-    console.log(kaijuChoice);
-    Cookies.set("playerKaijuSelection", kaijuChoice);
-    Cookies.set("userMaxHealth", 50);
-    Cookies.set("computerMaxHealth", 50);
+    if(kaijuChoice === 'chooseKong') {
+        setKaijuValues('chooseGodzilla', 8, 450, 6, 500);
+    } else if(kaijuChoice === 'chooseGodzilla') {
+        setKaijuValues('chooseMecha', 6, 500, 4, 550);
+    } else if(kaijuChoice === 'chooseMecha') {
+        setKaijuValues('chooseKong', 4, 550, 8, 450);
+    }
 
-    Cookies.set("userCurrentHealth", 50);
-    Cookies.set("computerCurrentHealth", 50);
+    kaijuChoice = chosenKaiju.outerHTML;
+    Cookies.set("playerKaijuSelection", kaijuChoice);
+    // Cookies.set("userMaxHealth", 50);
+    // Cookies.set("computerMaxHealth", 50);
+
+    // Cookies.set("opponent", enemyKaiju);
+    // Cookies.set("userCurrentHealth", 50);
+    // Cookies.set("computerCurrentHealth", 50);
 }
 
 var playersSelection = Cookies.get("playerKaijuSelection");
-console.log(playersSelection);
+// console.log(playersSelection);
 var chooseAKaiju = document.getElementsByClassName("chooseAKaiju");
 for(var i = 0; i < chooseAKaiju; i++) {
 }
