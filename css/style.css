@@ -1,5 +1,16 @@
 #attackButton {
-    width: 100px;
-    height: 100px;
-    background-color: aqua;
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
 }
+
+.choseAKaiju {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+}
+
+.choseAKaiju img {
+  height: 90%;
+}
+/*# sourceMappingURL=style.css.map */
