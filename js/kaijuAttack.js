@@ -17,60 +17,28 @@ var opponentKaiju = Cookies.get('opponent');
 var attackEqualizer = Cookies.get("attackStrength");
 var enemyAttackEqualizer = Cookies.get("opponentAttackStrength");
 
-var kaijuList = [
-    {
-        kaijuName: "King Kong",
-        maxHealth: 40,
-        attackStrength: 8
-    },
-    {
-        kaijuName: "Godzilla",
-        maxHealth: 50,
-        attackStrength: 6
-    },
-    {
-        kaijuName: "Mechagodzilla",
-        maxHealth: 60,
-        attackStrength: 7
-    }
-];
 
 
-
-
-
-// var playerKaijuSelection = Cookies.get("playerKaijuSelection");
-// if (playerKaijuSelection != undefined) {
-//     playerContainer.outerHTML = playerKaijuSelection;
-// }
-
-// console.log(playerKaijuSelection);
 
 var playerContainer = document.getElementById('playerSection')
 playerContainer.append(playerKaijuSelection);
 var computerContainer = document.getElementById('computerSection')
-var playerKaijuSelection = Cookies.get("playerKaijuSelection");
+
+
 if (playerKaijuSelection != undefined) {
     playerContainer.innerHTML = playerKaijuSelection;
     computerContainer.innerHTML = opponentKaiju;
 } else {
-    playerContainer.innerHTML = `<h3> You need to pick a character`;
+    document.body.innerHTML = `<h3> You need to pick a character</h3> <a href="/index.html" onclick="removeCookies()">GO BACK</a>`;
 }
 
-// if (playerKaijuSelectio 
-    console.log(playerKaijuSelection);
 
-// playerContainer.append(playerKaijuSelection);
 
-if (playerKaijuSelection === 'King Kong') {
-   console.log("hello world");
-}
-// var userCurrentHealth = userMaxHealth;
-// var computerCurrentHealth = computerMaxHealth;
+
 var playerHealthStatement = document.getElementById('playerHealthStatement');
-playerHealthStatement.innerHTML = `<p> Enemy Health: ${playerCurrentHealth}/${userMaxHealth}`;
+playerHealthStatement.innerHTML = `<p> Your Health: ${playerCurrentHealth}/${userMaxHealth}`;
 var computerHealthStatement = document.getElementById('computerHealthStatement');
-computerHealthStatement.innerHTML = `<p> Your Health: ${computerCurrentHealth}/${computerMaxHealth}`;
+computerHealthStatement.innerHTML = `<p> Enemy Health: ${computerCurrentHealth}/${computerMaxHealth}`;
 
 var winnerStatement = document.getElementById('winnerStatement');
 
@@ -98,17 +66,3 @@ function userAttack() {
 }
 
 
-var attackButton = document.getElementById('attackButton');
-
-
-// playerHealthStatement.innerHTML = `<p> Your Current health: ${userCurrentHealth}/${userMaxHealth}`;
-
-
-
-
-// computerContainer.innerText += computerKaiju + "  " + computerMaxHealth + "  " + computerAttackStrength;
-// console.log(computerKaiju + "  " + computerMaxHealth + "  " + computerAttackStrength);
-
-
-Cookies.set("userCurrentHealth", playerCurrentHealth)
-Cookies.set("computerCurrentHealth", computerCurrentHealth)

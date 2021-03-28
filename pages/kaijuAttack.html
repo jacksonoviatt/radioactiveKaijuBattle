@@ -12,19 +12,20 @@
 <body>
     <a href="/index.html" onclick="removeCookies()">Play Again</a>
     <div id="winnerStatement"><p>Lets Play</p></div>
-    <div>
+    <div class="playerArea">
         <section id="playerSection"> 
-            
         </section>
         <p id="playerHealthStatement"></p>
         <div id="attackButton" onclick="userAttack()">
             <p>Attack!!</p>
         </div>
     </div>
+    <div class=" computerArea">
     <section id="computerSection">
 
     </section>
     <p id="computerHealthStatement"></p>
+</div>
 
 
     <script src='https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js'></script>
