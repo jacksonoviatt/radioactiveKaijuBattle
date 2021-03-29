@@ -9,7 +9,10 @@
     justify-items: center;
     // padding-top: 40px;
     transition: 0.3s ease-in all;
-    margin-top: 100px;
+    margin-top: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: $purple 4px solid;
     img {
         margin-top: 50px;
 
@@ -18,21 +21,39 @@
         z-index: 5;
     }
    
-    h2 {
-        
+    article {
+        margin: 30px 0;
         position: absolute;
         text-align: center;
         width: 300px;
-        top: 180px;
+        text-align: center;
+        top: 715px;
         text-shadow: -0.8px -0.8px 0 $purple, 0.8px -0.8px 0 $purple, -0.8px 0.8px 0 $purple, 0.8px 0.8px 0 $purple;
+        p {
+            margin: 10px 0;
+        }
         
+    }
+    h2 {
+        font-size: 35px;
+        z-index: 50;
+        margin-top: 30px;
     }
     &:hover {
         
         box-shadow: -1px -1px 50px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
         img { height: 400px;
         }
+        article {
+            margin-top: 70px;
+            transition: 0.3s all ease-in;
+            text-shadow: -0.8px -0.8px 10px $orange, 0.8px -0.8px 0 $orange, -0.8px 0.8px 0 $orange, 0.8px 0.8px 0 $orange;
+        }
     }
+}
+
+#chooseYourCharacter { 
+    text-shadow: -1px -1px 3px $orange, 1px -1px 3px $orange, -1px 1px 3px $orange, 1px 1px 3px $orange;
 }
 
 #chooseYourPlayerContainer {
@@ -42,26 +63,39 @@
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
+    margin-bottom: 300px;
 }
+
 
 #chooseKong {
     background-image: url(/media/jungle.jpg);
-    // background-position: cover;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: $purple 2px solid;
+
 }
 
 #chooseGodzilla {
     background-image: url(/media/volcano.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: $purple 2px solid;
 }
 
 #chooseMecha {
     background-image: url(/media/explosion.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: $purple 3px solid;
+}
+
+#startButton {
+    background-color: $orange;
+    height: 60px;
+    border-radius: 20px;
+    width: 20%;
+    margin: 40px 40% 10px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+   text-decoration: none;
+   font-size: 20px;
+   font-weight: 700;
+    color: $almond;
+    box-shadow: -1px -1px 20px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
+}
+#choiceDisplay {
+    margin-top: 30px;
+    text-shadow: -1px -1px 10px $fernGreen, 1px -1px 3px $fernGreen, -1px 1px 3px $fernGreen, 1px 1px 3px $fernGreen;
 }

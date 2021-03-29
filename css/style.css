@@ -23,6 +23,9 @@ header {
 header h1 {
   color: #E5D4C0;
   text-shadow: -1px -1px 3px #3C1642, 1px -1px 3px #3C1642, -1px 1px 3px #3C1642, 1px 1px 10px #3C1642;
+  font-size: 40px;
+  margin: 50px 0 30px;
+  text-shadow: -0.8px -0.8px 0 #588157, 0.8px -0.8px 0 #588157, -0.8px 0.8px 0 #588157, 0.8px 0.8px 0 #588157;
 }
 
 a {
@@ -41,7 +44,10 @@ a {
   justify-items: center;
   -webkit-transition: 0.3s ease-in all;
   transition: 0.3s ease-in all;
-  margin-top: 100px;
+  margin-top: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: #3C1642 4px solid;
 }
 
 .choseAKaiju img {
@@ -52,12 +58,24 @@ a {
   z-index: 5;
 }
 
-.choseAKaiju h2 {
+.choseAKaiju article {
+  margin: 30px 0;
   position: absolute;
   text-align: center;
   width: 300px;
-  top: 180px;
+  text-align: center;
+  top: 715px;
   text-shadow: -0.8px -0.8px 0 #3C1642, 0.8px -0.8px 0 #3C1642, -0.8px 0.8px 0 #3C1642, 0.8px 0.8px 0 #3C1642;
+}
+
+.choseAKaiju article p {
+  margin: 10px 0;
+}
+
+.choseAKaiju h2 {
+  font-size: 35px;
+  z-index: 50;
+  margin-top: 30px;
 }
 
 .choseAKaiju:hover {
@@ -67,6 +85,17 @@ a {
 
 .choseAKaiju:hover img {
   height: 400px;
+}
+
+.choseAKaiju:hover article {
+  margin-top: 70px;
+  -webkit-transition: 0.3s all ease-in;
+  transition: 0.3s all ease-in;
+  text-shadow: -0.8px -0.8px 10px #E55934, 0.8px -0.8px 0 #E55934, -0.8px 0.8px 0 #E55934, 0.8px 0.8px 0 #E55934;
+}
+
+#chooseYourCharacter {
+  text-shadow: -1px -1px 3px #E55934, 1px -1px 3px #E55934, -1px 1px 3px #E55934, 1px 1px 3px #E55934;
 }
 
 #chooseYourPlayerContainer {
@@ -80,26 +109,43 @@ a {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  margin-bottom: 300px;
 }
 
 #chooseKong {
   background-image: url(/media/jungle.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  border: #3C1642 2px solid;
 }
 
 #chooseGodzilla {
   background-image: url(/media/volcano.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  border: #3C1642 2px solid;
 }
 
 #chooseMecha {
   background-image: url(/media/explosion.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  border: #3C1642 3px solid;
+}
+
+#startButton {
+  background-color: #E55934;
+  height: 60px;
+  border-radius: 20px;
+  width: 20%;
+  margin: 40px 40% 10px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: #E5D4C0;
+  -webkit-box-shadow: -1px -1px 20px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
+          box-shadow: -1px -1px 20px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
+}
+
+#choiceDisplay {
+  margin-top: 30px;
+  text-shadow: -1px -1px 10px #588157, 1px -1px 3px #588157, -1px 1px 3px #588157, 1px 1px 3px #588157;
 }
 /*# sourceMappingURL=style.css.map */

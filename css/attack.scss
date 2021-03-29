@@ -3,10 +3,10 @@
 
 #gamePlay {
     width: 90%;
-    margin: 0 5%;
+    margin: 90px 5% 10px;
     padding: 20px;
     background-image: linear-gradient(to right, $fernGreen, $purple);
-    height: 500px;
+    height: 600px;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -29,7 +29,7 @@
 }
 
 .healthScore {
-    font-size: 20px;
+    font-size: 30px;
     
 }
 .comboScore {
@@ -48,16 +48,17 @@
 }
 .kaijuImage {
     height: 300px;
-    padding: 30px;
-    transition: 0.4s all ease-in-out;
+    
+
     &:hover {
         transform: scaleX(-1);
-        transition: 0.4s all ease-in-out;
+
     }
 }
+
 #versus {
     position: absolute;
-    top: 200px;
+    top: 360px;
     color: $orange;
     text-shadow: -1px -1px 3px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
     font-size: 50px;
@@ -67,17 +68,34 @@
 #attackButton {
     background-color: $orange;
     height: 40px;
-    width: 10%;
-    margin: 0 45%;
+    width: 16%;
+    margin: 0 42%;
     display: grid;
     align-items: center;
     justify-items: center;
     position: absolute;
-    top: 400px;
+    top: 560px;
     color: $almond;
+    padding: 10px 0px;
+    border-radius: 20px;
     box-shadow: -1px -1px 20px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
-
+    font-size: 24px;
     
+}
+
+#startAgain {
+    background-color: $purple;
+    height: 40px;
+    width: 10%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 10px 45%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    color: $almond;
+    text-shadow: -1px -1px 20px $fernGreen, 1px -1px 30px $fernGreen, -1px 1px 3px $fernGreen, 1px 1px 3px $fernGreen;
+    text-decoration: none;
 }
 
 
@@ -117,3 +135,6 @@
     }
 }
 
+#choiceDisplay {
+    z-index: 9;
+}

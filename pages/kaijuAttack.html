@@ -11,11 +11,13 @@
 
 <body>
 <header>
-    <a href="/index.html" onclick="removeCookies()">Start Again?</a>
+   
     <h1 id="kaijuVSkaiju">Radioactive Kaiju Smackdown</h1>
+    <a href="/index.html" id="startAgain" onclick="removeCookies()">Start Again?</a>
     <div id="winnerStatement">
       
     </div>
+    
 </header>
     <section id="gamePlay">
         <div class="area">
@@ -27,7 +29,7 @@
                 <p>Damage taken:</p>
                 <h3 id="attackScorePlayer"><br></h3>
             </div>
-            <p id="playerHealthStatement"></p>
+            <p class="healthScore"  id="playerHealthStatement"></p>
         </div>
         <div class="area">
            
@@ -39,13 +41,14 @@
                 <p>Damage Taken:</p>
                 <h3 id="attackScoreComputer"><br></h3>
             </div>
-            <p id="computerHealthStatement"></p>
+            <p class="healthScore" id="computerHealthStatement"></p>
         </div>
     </section>
     <h2 id="versus">VS</h2>
     <div id="attackButton" onclick="userAttack();">
         <p>Attack!!</p>
     </div>
+    
 
     <script src='https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js'></script>
     <script src='/js/kaijuAttack.js'></script>

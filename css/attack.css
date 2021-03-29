@@ -23,6 +23,9 @@ header {
 header h1 {
   color: #E5D4C0;
   text-shadow: -1px -1px 3px #3C1642, 1px -1px 3px #3C1642, -1px 1px 3px #3C1642, 1px 1px 10px #3C1642;
+  font-size: 40px;
+  margin: 50px 0 30px;
+  text-shadow: -0.8px -0.8px 0 #588157, 0.8px -0.8px 0 #588157, -0.8px 0.8px 0 #588157, 0.8px 0.8px 0 #588157;
 }
 
 a {
@@ -31,11 +34,11 @@ a {
 
 #gamePlay {
   width: 90%;
-  margin: 0 5%;
+  margin: 90px 5% 10px;
   padding: 20px;
   background-image: -webkit-gradient(linear, left top, right top, from(#588157), to(#3C1642));
   background-image: linear-gradient(to right, #588157, #3C1642);
-  height: 500px;
+  height: 600px;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -71,7 +74,7 @@ a {
 }
 
 .healthScore {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .comboScore {
@@ -94,21 +97,16 @@ a {
 
 .kaijuImage {
   height: 300px;
-  padding: 30px;
-  -webkit-transition: 0.4s all ease-in-out;
-  transition: 0.4s all ease-in-out;
 }
 
 .kaijuImage:hover {
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
-  -webkit-transition: 0.4s all ease-in-out;
-  transition: 0.4s all ease-in-out;
 }
 
 #versus {
   position: absolute;
-  top: 200px;
+  top: 360px;
   color: #E55934;
   text-shadow: -1px -1px 3px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
   font-size: 50px;
@@ -118,8 +116,8 @@ a {
 #attackButton {
   background-color: #E55934;
   height: 40px;
-  width: 10%;
-  margin: 0 45%;
+  width: 16%;
+  margin: 0 42%;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -127,10 +125,31 @@ a {
           align-items: center;
   justify-items: center;
   position: absolute;
-  top: 400px;
+  top: 560px;
   color: #E5D4C0;
+  padding: 10px 0px;
+  border-radius: 20px;
   -webkit-box-shadow: -1px -1px 20px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
           box-shadow: -1px -1px 20px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
+  font-size: 24px;
+}
+
+#startAgain {
+  background-color: #3C1642;
+  height: 40px;
+  width: 10%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 10px 45%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  color: #E5D4C0;
+  text-shadow: -1px -1px 20px #588157, 1px -1px 30px #588157, -1px 1px 3px #588157, 1px 1px 3px #588157;
+  text-decoration: none;
 }
 
 .choseAKaiju h2 {
@@ -168,5 +187,9 @@ a {
   background-color: #588157;
   border-radius: 50px;
   text-shadow: -0.8px -0.8px 0 #E5D4C0, 0.8px -0.8px 0 #E5D4C0, -0.8px 0.8px 0 #E5D4C0, 0.8px 0.8px 0 #E5D4C0;
+}
+
+#choiceDisplay {
+  z-index: 9;
 }
 /*# sourceMappingURL=attack.css.map */
