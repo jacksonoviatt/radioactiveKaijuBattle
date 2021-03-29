@@ -10,33 +10,39 @@
 </head>
 
 <body>
-    <a href="/index.html" onclick="removeCookies()">Play Again</a>
+<header>
+    <a href="/index.html" onclick="removeCookies()">Start Again?</a>
+    <h1 id="kaijuVSkaiju">Radioactive Kaiju Smackdown</h1>
     <div id="winnerStatement">
-        <p>Lets Play</p>
+      
     </div>
+</header>
     <section id="gamePlay">
         <div class="area">
-            <p id="playerHealthStatement"></p>
+            
             <section id="playerSection">
             </section>
             
             <div class="comboScore">
-                <p>Your Combo:</p>
+                <p>Damage taken:</p>
                 <h3 id="attackScorePlayer"><br></h3>
             </div>
+            <p id="playerHealthStatement"></p>
         </div>
         <div class="area">
-           <p id="computerHealthStatement"></p>
+           
             <section id="computerSection">
 
             </section>
             
             <div class="comboScore">
-                <p>Enemy Combo:</p>
+                <p>Damage Taken:</p>
                 <h3 id="attackScoreComputer"><br></h3>
             </div>
+            <p id="computerHealthStatement"></p>
         </div>
     </section>
+    <h2 id="versus">VS</h2>
     <div id="attackButton" onclick="userAttack()">
         <p>Attack!!</p>
     </div>

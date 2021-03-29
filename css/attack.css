@@ -7,7 +7,13 @@ body {
   background-color: #344E41;
 }
 
+header {
+  height: 100px;
+}
+
 #gamePlay {
+  width: 90%;
+  margin: 0 5%;
   background-image: -webkit-gradient(linear, left top, right top, from(#588157), to(#3C1642));
   background-image: linear-gradient(to right, #588157, #3C1642);
   height: 500px;
@@ -19,16 +25,13 @@ body {
   justify-items: center;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  border-top: #588157 5px solid;
-  border-bottom: #3C1642 5px solid;
-  border-left: #3C1642 5px solid;
-  border-right: #588157 5px solid;
   color: #E5D4C0;
+  -webkit-box-shadow: -1px -1px 50px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
+          box-shadow: -1px -1px 50px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
 }
 
 #gamePlay .area {
   text-align: center;
-  width: 40%;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -66,6 +69,30 @@ body {
 
 .kaijuImage {
   height: 300px;
+  padding: 30px;
+  -webkit-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+}
+
+.kaijuImage:hover {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  -webkit-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+}
+
+#versus {
+  position: absolute;
+  top: 200px;
+  color: #E55934;
+  text-shadow: -1px -1px 3px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
+  font-size: 50px;
+  margin: 0 47%;
+}
+
+.choseAKaiju h2 {
+  font-size: 35px;
+  text-shadow: -1px -1px 3px #E55934, 1px -1px 3px #E55934, -1px 1px 3px #E55934, 1px 1px 3px #E55934;
 }
 
 #makeAChoice {
@@ -91,7 +118,7 @@ body {
   text-decoration: none;
   padding: 30px 0 0;
   height: 70px;
-  width: 230px;
+  width: 250px;
   font-weight: 900;
   font-size: 30px;
   text-align: center;

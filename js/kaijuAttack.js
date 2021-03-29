@@ -49,12 +49,12 @@ var computerAttackScore = document.getElementById('attackScoreComputer')
 function computerAttack() {
     var randomMath = Math.floor(Math.random() * 10 + enemyAttackEqualizer);
     playerCurrentHealth -= randomMath;
-    computerAttackScore.innerText = randomMath;
+    playerAttackScore.innerText = "-" + randomMath;
     console.log(randomMath);
     Cookies.set("userCurrentHealth", playerCurrentHealth);
     playerHealthStatement.innerHTML = `<p> Your Health: ${playerCurrentHealth}/${userMaxHealth}`;
     if (playerCurrentHealth <= 0 && playerCurrentHealth < computerCurrentHealth) {
-        winnerStatement.innerHTML = "<p>You lose :)</p>"
+        document.body.innerHTML = `<div id="makeAChoice"><h3> You lost :(</h3> <a href="/index.html" onclick="removeCookies()">PLAY AGAIN</a></div>`;
     } 
 }
 
@@ -62,12 +62,12 @@ var computerCurrentHealth = Cookies.get("computerCurrentHealth")
 function userAttack() {
     var randomMath = Math.floor(Math.random() * 10 + attackEqualizer);
     computerCurrentHealth -= randomMath;
-    playerAttackScore.innerText = randomMath;
+    computerAttackScore.innerText = "-" + randomMath;
     Cookies.set("computerCurrentHealth", computerCurrentHealth);
     computerHealthStatement.innerHTML = `<p> Enemy Health ${computerCurrentHealth}/${computerMaxHealth}`;
     computerAttack();
     if (computerCurrentHealth <= 0 && playerCurrentHealth > computerCurrentHealth) {
-        winnerStatement.innerHTML = "<p>You win :)</p>"
+        document.body.innerHTML = `<div id="makeAChoice"><h3> You won :)</h3> <a href="/index.html" onclick="removeCookies()">PLAY AGAIN</a></div>`; 
     } 
 }
 

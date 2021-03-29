@@ -1,19 +1,21 @@
 @import "_globals.scss";
+
+header {
+    height: 100px;
+}
 #gamePlay {
+    width: 90%;
+    margin: 0 5%;
     background-image: linear-gradient(to right, $fernGreen, $purple);
     height: 500px;
     display: grid;
     align-items: center;
     justify-items: center;
     grid-template-columns: 1fr 1fr;
-    border-top: $fernGreen 5px solid;
-    border-bottom: $purple 5px solid;
-    border-left: $purple 5px solid;
-    border-right: $fernGreen 5px solid;
     color: $almond;
+    box-shadow: -1px -1px 50px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
     .area {
         text-align: center;
-        width: 40%;
         display: grid;
         align-items: center;
         justify-items: center;
@@ -41,7 +43,28 @@
 }
 .kaijuImage {
     height: 300px;
+    padding: 30px;
+    transition: 0.4s all ease-in-out;
+    &:hover {
+        transform: scaleX(-1);
+        transition: 0.4s all ease-in-out;
+    }
 }
+#versus {
+    position: absolute;
+    top: 200px;
+    color: $orange;
+    text-shadow: -1px -1px 3px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
+    font-size: 50px;
+    margin: 0 47%;
+}
+.choseAKaiju {
+    h2 {
+        font-size: 35px;
+        text-shadow: -1px -1px 3px $orange, 1px -1px 3px $orange, -1px 1px 3px $orange, 1px 1px 3px $orange;
+    }
+}
+
 
 #makeAChoice {
     background-color: $purple;
@@ -61,7 +84,7 @@
         text-decoration: none;
         padding: 30px 0 0;
         height: 70px;
-        width: 230px;
+        width: 250px;
         font-weight: 900;
         font-size: 30px;
         text-align: center;
@@ -70,3 +93,4 @@
         text-shadow: -0.8px -0.8px 0 $almond, 0.8px -0.8px 0 $almond, -0.8px 0.8px 0 $almond, 0.8px 0.8px 0 $almond;
     }
 }
+
