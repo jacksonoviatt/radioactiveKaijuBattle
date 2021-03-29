@@ -22,10 +22,9 @@ header {
 
 header h1 {
   color: #E5D4C0;
-  text-shadow: -1px -1px 3px #3C1642, 1px -1px 3px #3C1642, -1px 1px 3px #3C1642, 1px 1px 10px #3C1642;
   font-size: 40px;
   margin: 50px 0 30px;
-  text-shadow: -0.8px -0.8px 0 #588157, 0.8px -0.8px 0 #588157, -0.8px 0.8px 0 #588157, 0.8px 0.8px 0 #588157;
+  text-shadow: -0.8px -0.8px 20px #588157, 0.8px -0.8px 20px #588157, -0.8px 0.8px 0 #588157, 0.8px 0.8px 0 #588157;
 }
 
 a {
@@ -59,6 +58,8 @@ a {
 }
 
 .choseAKaiju article {
+  -webkit-transition: 0.3s all ease-in;
+  transition: 0.3s all ease-in;
   margin: 30px 0;
   position: absolute;
   text-align: center;
@@ -69,7 +70,12 @@ a {
 }
 
 .choseAKaiju article p {
-  margin: 10px 0;
+  margin: 20px;
+  word-spacing: 15px;
+}
+
+.choseAKaiju article span {
+  text-shadow: none;
 }
 
 .choseAKaiju h2 {
@@ -89,8 +95,6 @@ a {
 
 .choseAKaiju:hover article {
   margin-top: 70px;
-  -webkit-transition: 0.3s all ease-in;
-  transition: 0.3s all ease-in;
   text-shadow: -0.8px -0.8px 10px #E55934, 0.8px -0.8px 0 #E55934, -0.8px 0.8px 0 #E55934, 0.8px 0.8px 0 #E55934;
 }
 

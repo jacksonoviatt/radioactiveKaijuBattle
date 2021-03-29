@@ -23,10 +23,10 @@ header {
     text-align: center;
     h1 {
         color: $almond;
-        text-shadow: -1px -1px 3px $purple, 1px -1px 3px $purple, -1px 1px 3px $purple, 1px 1px 10px $purple;
+        // text-shadow: -1px -1px 3px $purple, 1px -1px 3px $purple, -1px 1px 3px $purple, 1px 1px 10px $purple;
         font-size: 40px;
         margin: 50px 0 30px;
-        text-shadow: -0.8px -0.8px 0 $fernGreen, 0.8px -0.8px 0 $fernGreen, -0.8px 0.8px 0 $fernGreen, 0.8px 0.8px 0 $fernGreen;
+        text-shadow: -0.8px -0.8px 20px $fernGreen, 0.8px -0.8px 20px $fernGreen, -0.8px 0.8px 0 $fernGreen, 0.8px 0.8px 0 $fernGreen;
        
     }
 }
@@ -34,3 +34,4 @@ header {
 a {
     color: $almond;
 }
+

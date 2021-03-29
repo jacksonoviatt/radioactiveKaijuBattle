@@ -21,13 +21,13 @@ var chooseYourCharacter = document.getElementById('choiceDisplay');
 function selectKaiju(kaijuChoice) {
     var chosenKaiju = document.getElementById(kaijuChoice);
     if(kaijuChoice === 'chooseKong') {
-        setKaijuValues('chooseGodzilla', 8, 40, 6, 50);
+        setKaijuValues('chooseGodzilla', 8, 20, 6, 25);
         chooseYourCharacter.innerText = "King Kong is your fighter";
     } else if(kaijuChoice === 'chooseGodzilla') {
-        setKaijuValues('chooseMecha', 6, 50, 4, 60);
+        setKaijuValues('chooseMecha', 6, 25, 4, 30);
         chooseYourCharacter.innerText = "Godzilla is your fighter";
     } else if(kaijuChoice === 'chooseMecha') {
-        setKaijuValues('chooseKong', 4, 60, 10, 40);
+        setKaijuValues('chooseKong', 4, 30, 10, 20);
         chooseYourCharacter.innerText = "Mechagodzilla is your fighter";
     }
     kaijuChoice = chosenKaiju.outerHTML;

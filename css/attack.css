@@ -22,10 +22,9 @@ header {
 
 header h1 {
   color: #E5D4C0;
-  text-shadow: -1px -1px 3px #3C1642, 1px -1px 3px #3C1642, -1px 1px 3px #3C1642, 1px 1px 10px #3C1642;
   font-size: 40px;
   margin: 50px 0 30px;
-  text-shadow: -0.8px -0.8px 0 #588157, 0.8px -0.8px 0 #588157, -0.8px 0.8px 0 #588157, 0.8px 0.8px 0 #588157;
+  text-shadow: -0.8px -0.8px 20px #588157, 0.8px -0.8px 20px #588157, -0.8px 0.8px 0 #588157, 0.8px 0.8px 0 #588157;
 }
 
 a {
@@ -158,6 +157,10 @@ header h1 {
   text-decoration: none;
   -webkit-box-shadow: -1px -1px 2px #E55934, 1px -1px 30px #E55934, -1px 1px 10px aqua, 1px 1px 3px aqua;
           box-shadow: -1px -1px 2px #E55934, 1px -1px 30px #E55934, -1px 1px 10px aqua, 1px 1px 3px aqua;
+}
+
+.stats {
+  display: none;
 }
 
 .choseAKaiju article {

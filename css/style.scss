@@ -24,6 +24,7 @@
 
 
     article {
+        transition: 0.3s all ease-in;
         margin: 30px 0;
         position: absolute;
         text-align: center;
@@ -32,9 +33,12 @@
         top: 715px;
         text-shadow: -0.8px -0.8px 0 $purple, 0.8px -0.8px 0 $purple, -0.8px 0.8px 0 $purple, 0.8px 0.8px 0 $purple;
         p {
-            margin: 10px 0;
+            margin: 20px ;
+            word-spacing: 15px;
         }
-        
+        span {
+            text-shadow:none;
+        }
     }
     h2 {
         font-size: 35px;
@@ -48,7 +52,6 @@
         }
         article {
             margin-top: 70px;
-            transition: 0.3s all ease-in;
             text-shadow: -0.8px -0.8px 10px $orange, 0.8px -0.8px 0 $orange, -0.8px 0.8px 0 $orange, 0.8px 0.8px 0 $orange;
         }
     }
