@@ -33,6 +33,7 @@ var computerContainer = document.getElementById('computerSection')
 if (playerKaijuSelection != undefined) {
     playerContainer.innerHTML = playerKaijuSelection;
     computerContainer.innerHTML = opponentKaiju;
+    
 } else {
     document.body.innerHTML = `<div id="makeAChoice"><h3> You need to pick a character</h3> <a href="/index.html" onclick="removeCookies()">GO BACK</a></div>`;
 }

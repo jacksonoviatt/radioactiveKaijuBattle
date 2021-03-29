@@ -31,12 +31,75 @@ a {
 
 .choseAKaiju {
   width: 300px;
-  height: 300px;
-  display: inline-block;
-  background-color: red;
+  height: 400px;
+  background-color: #E55934;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-transition: 0.3s ease-in all;
+  transition: 0.3s ease-in all;
+  margin-top: 100px;
 }
 
 .choseAKaiju img {
-  height: 90%;
+  margin-top: 50px;
+  height: 300px;
+  -webkit-transition: 0.3s ease-in all;
+  transition: 0.3s ease-in all;
+  z-index: 5;
+}
+
+.choseAKaiju h2 {
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  top: 180px;
+  text-shadow: -0.8px -0.8px 0 #3C1642, 0.8px -0.8px 0 #3C1642, -0.8px 0.8px 0 #3C1642, 0.8px 0.8px 0 #3C1642;
+}
+
+.choseAKaiju:hover {
+  -webkit-box-shadow: -1px -1px 50px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
+          box-shadow: -1px -1px 50px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
+}
+
+.choseAKaiju:hover img {
+  height: 400px;
+}
+
+#chooseYourPlayerContainer {
+  width: 90vw;
+  margin: 0 5vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+#chooseKong {
+  background-image: url(/media/jungle.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: #3C1642 2px solid;
+}
+
+#chooseGodzilla {
+  background-image: url(/media/volcano.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: #3C1642 2px solid;
+}
+
+#chooseMecha {
+  background-image: url(/media/explosion.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: #3C1642 3px solid;
 }
 /*# sourceMappingURL=style.css.map */

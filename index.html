@@ -12,21 +12,22 @@
 <body>
     <header>
         <h1>Radioactive Kaiju Smackdown</h1>
-        <h3 id="choiceDisplay"></h3>
-        <a href="/pages/kaijuAttack.html">Proceed</a>
+        <h2 id="chooseYourCharacter">CHOOSE YOUR CHARACTER</h2>
+        <h3 id="choiceDisplay"><br></h3>
+        <a href="/pages/kaijuAttack.html" id="startButton">Lets Smackdown!</a>
     </header>
     <section id="chooseYourPlayerContainer">
         <div class="choseAKaiju" id="chooseKong" onclick="selectKaiju('chooseKong')">
             <h2>King Kong</h2>
             <img src="/media/kong.png" alt="king kong" class="kaijuImage">
         </div>
-        <div class="choseAKaiju" id="chooseGodzilla" onclick="selectKaiju('chooseGodzilla')">
-            <h2>Godzilla</h2>
-            <img src="/media/godzilla.png" alt="godzilla" class="kaijuImage">
-        </div>
         <div class="choseAKaiju" id="chooseMecha" onclick="selectKaiju('chooseMecha')">
             <h2>Mechagodzilla</h2>
             <img src="/media/mecha.png" alt="mechagodzilla" class="kaijuImage">
+        </div>
+        <div class="choseAKaiju" id="chooseGodzilla" onclick="selectKaiju('chooseGodzilla')">
+            <h2>Godzilla</h2>
+            <img src="/media/godzilla.png" alt="godzilla" class="kaijuImage">
         </div>
     </section>
     <script src='https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js'></script>
