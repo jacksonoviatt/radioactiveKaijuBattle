@@ -3,7 +3,7 @@
 
 #gamePlay {
     width: 90%;
-    margin: 90px 5% 10px;
+    margin: 130px 5% 100px;
     padding: 20px;
     background-image: linear-gradient(to right, $fernGreen, $purple);
     height: 600px;
@@ -12,7 +12,7 @@
     justify-items: center;
     grid-template-columns: 1fr 1fr;
     color: $almond;
-    transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.2s;
     // box-shadow: -1px -1px 50px aqua, 1px -1px 50px aqua, -1px 1px 50px aqua, 1px 1px 50px aqua;
     box-shadow: -1px -1px 50px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
     .area {
@@ -27,7 +27,11 @@
         }
     }
 }
-
+header {
+    h1 {
+        margin: 75px 0 30px;;
+    }
+}
 .healthScore {
     font-size: 30px;
     
@@ -46,10 +50,11 @@
         // margin-left: 110px;
     }
 }
-.kaijuImage {
-    height: 300px;
-    
 
+.kaijuImage {
+    padding: 10px;
+    height: 300px;
+    transition: 0.2s all ease-in;
     &:hover {
         transform: scaleX(-1);
 
@@ -93,14 +98,31 @@
     display: grid;
     align-items: center;
     justify-items: center;
-    color: $almond;
-    text-shadow: -1px -1px 20px $fernGreen, 1px -1px 30px $fernGreen, -1px 1px 3px $fernGreen, 1px 1px 3px $fernGreen;
+    // color: chartreuse;
+    text-shadow: -1px -1px 2px $fernGreen, 1px -1px 30px $fernGreen, -1px 1px 3px $fernGreen, 1px 1px 3px $fernGreen;
     text-decoration: none;
+    box-shadow: -1px -1px 2px $orange, 1px -1px 30px $orange, -1px 1px 10px aqua, 1px 1px 3px aqua;
+
 }
 
 
 .choseAKaiju {
+    article {
+        margin: 30px 0;
+        // position: absolute;
+        text-align: center;
+        width: 300px;
+        text-align: center;
+        // top: 715px;
+        text-shadow: -0.8px -0.8px 0 $purple, 0.8px -0.8px 0 $purple, -0.8px 0.8px 0 $purple, 0.8px 0.8px 0 $purple;
+        p {
+            margin: 10px 0;
+        }
+    }
+
     h2 {
+        transition: 0.2s all ease;
+        margin-bottom: 20px;
         font-size: 35px;
         text-shadow: -1px -1px 3px $orange, 1px -1px 3px $orange, -1px 1px 3px $orange, 1px 1px 3px $orange;
     }
@@ -123,7 +145,7 @@
         color: $purple;
         letter-spacing: 2.2px;
         text-decoration: none;
-        padding: 30px 0 0;
+        padding: 40px 0 0;
         height: 70px;
         width: 250px;
         font-weight: 900;

@@ -35,7 +35,6 @@ function selectKaiju(kaijuChoice) {
 }
 
 
-// chosenKaiju.style.boxShadow = '-1px -1px 50px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua';
 
 
 
