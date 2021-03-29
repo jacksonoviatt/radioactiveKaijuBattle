@@ -1,11 +1,10 @@
 @import "_globals.scss";
 
-header {
-    height: 100px;
-}
+
 #gamePlay {
     width: 90%;
     margin: 0 5%;
+    padding: 20px;
     background-image: linear-gradient(to right, $fernGreen, $purple);
     height: 500px;
     display: grid;
@@ -13,6 +12,8 @@ header {
     justify-items: center;
     grid-template-columns: 1fr 1fr;
     color: $almond;
+    transition: all ease-in-out 0.5s;
+    // box-shadow: -1px -1px 50px aqua, 1px -1px 50px aqua, -1px 1px 50px aqua, 1px 1px 50px aqua;
     box-shadow: -1px -1px 50px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
     .area {
         text-align: center;
@@ -27,6 +28,10 @@ header {
     }
 }
 
+.healthScore {
+    font-size: 20px;
+    
+}
 .comboScore {
     display: grid;
     align-items: center;
@@ -58,6 +63,24 @@ header {
     font-size: 50px;
     margin: 0 47%;
 }
+
+#attackButton {
+    background-color: $orange;
+    height: 40px;
+    width: 10%;
+    margin: 0 45%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    top: 400px;
+    color: $almond;
+    box-shadow: -1px -1px 20px aqua, 1px -1px 3px aqua, -1px 1px 3px aqua, 1px 1px 3px aqua;
+
+    
+}
+
+
 .choseAKaiju {
     h2 {
         font-size: 35px;

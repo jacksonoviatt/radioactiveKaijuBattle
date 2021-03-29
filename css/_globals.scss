@@ -1,10 +1,9 @@
 $fernGreen: #588157;
 $green: #344E41;
 $purple: #3C1642;
-
 $orange: #E55934;
 $almond: #E5D4C0;
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -13,4 +12,22 @@ $almond: #E5D4C0;
 
 body {
     background-color: $green;
+    font-family: 'Comfortaa', cursive;
+    color: $almond;
+}
+
+header {
+    height: 150px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    h1 {
+        color: $almond;
+        text-shadow: -1px -1px 3px $purple, 1px -1px 3px $purple, -1px 1px 3px $purple, 1px 1px 10px $purple;
+
+    }
+}
+
+a {
+    color: $almond;
 }
