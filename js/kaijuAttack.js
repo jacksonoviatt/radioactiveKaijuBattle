@@ -122,7 +122,7 @@ function computerAttack() {
 // This is the user attack, this function is very similar to the above function, only 
 // now it is for the users attack, this function will run when you click on the attack button 
 // and then thanks to our handy friend the setTimeout function, the computer attack will comnence
-// one second after the user attack
+// 800 milliseconds after the user attack
 function userAttack() {
     playerImage.style.height = "320px";
     playerImage.style.padding = "0px";
@@ -134,7 +134,7 @@ function userAttack() {
     computerAttackScore.innerText = "-" + randomMath;
     Cookies.set("computerCurrentHealth", computerCurrentHealth);
     computerHealthStatement.innerHTML = `<p> Enemy Health ${computerCurrentHealth}/${computerMaxHealth}`;
-    setTimeout(computerAttack, 1000);
+    setTimeout(computerAttack, 800);
 }
 
 
