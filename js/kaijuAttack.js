@@ -107,15 +107,12 @@ function computerAttack() {
     Cookies.set("userCurrentHealth", playerCurrentHealth);
     playerHealthStatement.innerHTML = `<p> Your Health: ${playerCurrentHealth}/${userMaxHealth}`;
     
-    // This conditional statement is in the computer attack function because I didn't want 
-    // The You Won/you lost messages to show up until both characters had made thier moves
+
     // This conditon block displays the message that you won or lost by inserting code into the body
     // this is the same as the "go back you need to make a choice" from above
     if (playerCurrentHealth <= 0 && playerCurrentHealth < computerCurrentHealth) {
         document.body.innerHTML = `<div id="makeAChoice"><h3> You lost :(</h3> <a href="/index.html" onclick="removeCookies()">PLAY AGAIN</a></div>`;
-    } else  if (computerCurrentHealth <= 0 && playerCurrentHealth > computerCurrentHealth) {
-        document.body.innerHTML = `<div id="makeAChoice"><h3> You won :)</h3> <a href="/index.html" onclick="removeCookies()">PLAY AGAIN</a></div>`;
-    }
+    } 
 }
 
 
@@ -135,6 +132,9 @@ function userAttack() {
     Cookies.set("computerCurrentHealth", computerCurrentHealth);
     computerHealthStatement.innerHTML = `<p> Enemy Health ${computerCurrentHealth}/${computerMaxHealth}`;
     setTimeout(computerAttack, 800);
+    if (computerCurrentHealth <= 0 && playerCurrentHealth > computerCurrentHealth) {
+        document.body.innerHTML = `<div id="makeAChoice"><h3> You won :)</h3> <a href="/index.html" onclick="removeCookies()">PLAY AGAIN</a></div>`;
+    }
 }
 
 
