@@ -19,6 +19,7 @@ var opponentKaiju = Cookies.get('opponent');
 var attackEqualizer = Cookies.get("attackStrength");
 var enemyAttackEqualizer = Cookies.get("opponentAttackStrength");
 
+
 // Here is a couple of funcitons these are functions that set the animations back to normal
 //  I will call on later using setTimeout to set the "bounce back" of the game play area box shadow
 // and the animation of the fight, they are not grouped together because setTimeout doesn't take arguments in the line of code
@@ -135,6 +136,14 @@ function userAttack() {
     if (computerCurrentHealth <= 0 && playerCurrentHealth > computerCurrentHealth) {
         document.body.innerHTML = `<div id="makeAChoice"><h3> You won :)</h3> <a href="/index.html" onclick="removeCookies()">PLAY AGAIN</a></div>`;
     }
+}
+
+// This fixes any holdover styling from the selection styling
+playerContainer.querySelector('img').style.height = "300px";
+var classKaiju = document.getElementsByClassName('choseAKaiju');
+for (var i = 0; i < classKaiju.length; i++) {
+    classKaiju[i].style.boxShadow = "none";
+    
 }
 
 
