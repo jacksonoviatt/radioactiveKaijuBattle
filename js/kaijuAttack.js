@@ -143,7 +143,9 @@ playerContainer.querySelector('img').style.height = "300px";
 var classKaiju = document.getElementsByClassName('choseAKaiju');
 for (var i = 0; i < classKaiju.length; i++) {
     classKaiju[i].style.boxShadow = "none";
-    
+    // classKaiju[i].style.padding = "0px";
 }
+playerContainer.querySelector('article').style.margin = "0";
+
 
 
